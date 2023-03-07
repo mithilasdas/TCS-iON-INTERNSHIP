@@ -1,0 +1,32 @@
+html>
+    <head>
+        <meta charset="UTF-8"
+        <p style="text-align:center;"/p>
+        <title>
+            Salary Prediction
+        </title>
+        
+    <center><img src="{{url_for('static', filename='salary.jpg')}}" ></center>
+ </head>
+ <body>
+     <div class="login" >
+       <center><h1>Salary Prediction</h1>></center> 
+     </div>
+     <div class="main">
+     <center> <body>
+        <form action='/predict' method="POST">
+            age: <input type='text' name='age'><br>
+            workclass: <input type='text' name='workclass'><br>
+            education: <input type='text' name='education'><br>
+            marital_status: <input type='text' name='marital_status'><br>
+            occupation: <input type='text' name='occupation'><br>
+            relationship: <input type='text' name='relationship'><br>
+            race: <input type='text' name='race'><br>
+            sex: <input type='text' name='sex'><br>
+            hours_per_week: <input type='text' name='hours_per_week'><br>
+            native_country: <input type='text' name='native_country'><br>
+            salary: {{result}} <br>
+            <input type='submit' value='Predict'>
+        </form>
+    </body>></center>
+</html>
